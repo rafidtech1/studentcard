@@ -20,17 +20,18 @@
             <input type="text" id="inName" placeholder="Enter Name" oninput="updateCard()">
         </div>
 
-        <!-- ID No: Only Numbers -->
-        <div class="form-group">
-            <label>ID No</label>
-            <input type="text" id="inID" placeholder="123456" oninput="validateNumber(this, 'errID')">
-            <span id="errID" class="error-msg">Only numbers allowed!</span>
-        </div>
+        <!-- ID No: Only Numbers & Max 10 Digits -->
+<div class="form-group">
+    <label>ID No</label>
+    <!-- maxlength="10" যোগ করা হয়েছে -->
+    <input type="text" id="inID" placeholder="123456" maxlength="10" oninput="validateNumber(this, 'errID')">
+    <span id="errID" class="error-msg">Only numbers allowed!</span>
+</div>
 
         <!-- Session: Numbers and Hyphen (-) -->
         <div class="form-group">
             <label>Session</label>
-            <input type="text" id="inSession" placeholder="2024-2025" oninput="validateSession(this, 'errSession')">
+            <input type="text" id="inSession" placeholder="2024-2025" maxlength="10" oninput="validateSession(this, 'errSession')">
             <span id="errSession" class="error-msg">Only numbers & hyphen allowed!</span>
         </div>
 
@@ -46,7 +47,7 @@
         <!-- Batch: Only Numbers -->
         <div class="form-group">
             <label>Batch</label>
-            <input type="text" id="inBatch" placeholder="29" oninput="validateNumber(this, 'errBatch')">
+            <input type="text" id="inBatch" placeholder="29" maxlength="10" oninput="validateNumber(this, 'errBatch')">
             <span id="errBatch" class="error-msg">Only numbers allowed!</span>
         </div>
 
